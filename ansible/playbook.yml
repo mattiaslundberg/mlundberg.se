@@ -6,10 +6,13 @@
   pre_tasks:
     - raw: apt-get install -y python-simplejson
 
+  vars:
+    domain_name: "mlundberg.se"
+
   roles:
     - role: mattiaslundberg.letsencrypt
       letsencrypt_email: "me@mlundberg.se"
-      domain_name: "mlundberg.se"
+    - role: deploy
 
   tasks:
     - name: Upgrade system
