@@ -1,0 +1,3 @@
+[submodule "ansible/roles/mattiaslundberg.letsencrypt"]
+	path = ansible/roles/mattiaslundberg.letsencrypt
+	url = git@github.com:mattiaslundberg/ansible-letsencrypt.git
