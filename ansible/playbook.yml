@@ -14,7 +14,3 @@
   tasks:
     - name: Upgrade system
       apt: upgrade=dist update_cache=yes
-    - name: Remove old site
-      file:
-        path: /etc/nginx/sites-enabled/le
-        state: absent
