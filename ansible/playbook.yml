@@ -10,7 +10,7 @@
     domain_name: "mlundberg.se"
 
   roles:
-    - role: mattiaslundberg.letsencrypt
+    - role: letsencrypt
       letsencrypt_email: "me@mlundberg.se"
     - role: deploy
 
