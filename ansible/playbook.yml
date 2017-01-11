@@ -1,13 +1,10 @@
 ---
 - hosts: mlwww
   become: true
-  gather_facts: no
-
-  pre_tasks:
-    - raw: apt-get install -y python-simplejson
 
   vars:
     domain_name: "mlundberg.se"
+    ansible_python_interpreter: "/usr/bin/python3"
 
   roles:
     - role: letsencrypt
