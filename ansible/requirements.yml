@@ -1,2 +1,2 @@
 - name: letsencrypt
-  src: https://github.com/mattiaslundberg/ansible-letsencrypt
+  src: git+ssh://git@github.com:22/mattiaslundberg/ansible-letsencrypt.git
