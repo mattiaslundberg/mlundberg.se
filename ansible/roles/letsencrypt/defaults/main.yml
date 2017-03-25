@@ -1,2 +1,4 @@
 ---
-extra_location_blocks: ""
+letsencrypt_extra_location_blocks: ""
+letsencrypt_domain_name: "example.com"
+letsencrypt_email: "me@example.com"

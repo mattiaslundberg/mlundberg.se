@@ -3,7 +3,7 @@
   become: true
 
   vars:
-    domain_name: "mlundberg.se"
+    letsencrypt_domain_name: "mlundberg.se"
     ansible_python_interpreter: "/usr/bin/python3"
 
   roles:

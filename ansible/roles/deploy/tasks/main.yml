@@ -2,7 +2,7 @@
 - name: Upload code
   copy:
     src: ../../../../{{ item }}
-    dest: /var/www/{{ domain_name }}/
+    dest: /var/www/{{ letsencrypt_domain_name }}/
   notify: restart nginx
   tags: [deploy]
   with_items:
