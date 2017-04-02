@@ -1,4 +1,4 @@
 Code and configuration for [mlundberg.se](https://mlundberg.se).
 
 ## Deploy
-`ansible-playbook ansible/playbook.yml --tags deploy`
+`cd ansible && ansible-playbook playbook.yml --tags deploy`
