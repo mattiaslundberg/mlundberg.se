@@ -6,9 +6,10 @@ node_js:
 cache:
   yarn: true
 
+install:
+  - mkdir -p build  
 
 script:
-  - mkdir -p build  
   - cp -r css build
   - cp -r font-awesome build
   - cp -r fonts build
