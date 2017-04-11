@@ -1,4 +1,3 @@
-
 sudo: false
 language: node_js
 node_js:
@@ -31,6 +30,3 @@ deploy:
   local_dir: build
   detect_encoding: true
   cache_control: "max-age=3600"
-  on:
-    branch: master
-    repo: mattiaslundberg/mlundberg.se
