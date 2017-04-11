@@ -17,6 +17,7 @@ script:
   - cp -r js build
   - cp -r less build
   - cp -r index.html build
+  - ls build
 
 
 deploy:
