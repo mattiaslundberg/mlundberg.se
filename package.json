@@ -1,0 +1,8 @@
+{
+  "name": "mlundberg.se",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:mattiaslundberg/mlundberg.se.git",
+  "author": "Mattias Lundberg <mattiaslundberg@openmailbox.org>",
+  "license": "MIT"
+}
