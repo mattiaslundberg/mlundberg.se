@@ -11,11 +11,7 @@ install:
 
 script:
   - cp -r css build
-  - cp -r font-awesome build
-  - cp -r fonts build
   - cp -r img build
-  - cp -r js build
-  - cp -r less build
   - cp -r *.html build
 
 
