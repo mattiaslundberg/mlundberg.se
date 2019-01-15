@@ -14,8 +14,7 @@ const vm = new Vue({
         this.questionIndex = Math.round(Math.random() * this.questions.length);
         this.loading = false;
         this.question = "NEW_VALUE";
-        }
-      )
+      }).catch(e => console.warn(e))
   },
   watch: {
     question: function() {
