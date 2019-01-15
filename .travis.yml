@@ -1,15 +1,13 @@
 sudo: false
 language: node_js
 node_js:
-  - "7"
-
-cache:
-  yarn: true
+  - "9"
 
 install:
-  - mkdir -p build  
+  - mkdir -p build
 
 script:
+  - cp -r checkin build
   - cp -r css build
   - cp -r img build
   - cp -r *.html build
