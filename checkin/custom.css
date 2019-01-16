@@ -1,10 +1,32 @@
+html,
 body {
   background: #f0f0f0;
+  height: 100%;
 }
+
 .question {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: #ffe2e2;
   color: #101010;
-  border: 0.25rem solid #a0a0a0;
-  border-radius: 1rem;
   font-size: 2rem;
+  width: 100%;
+  min-height: 50%;
+}
+
+@media (min-width: 992px) {
+  .question {
+    width: 75%;
+    align-self: center;
+    border: 0.25rem solid #a0a0a0;
+    border-radius: 1rem;
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .question {
+      font-size: 4rem;
+  }
 }
