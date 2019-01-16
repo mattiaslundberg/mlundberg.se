@@ -14,8 +14,21 @@
   </head>
 
   <body class="text-center">
-    <div class="d-flex justify-content-center h-100" id="app">
+    <div class="d-flex flex-column justify-content-center h-100" id="app">
       <div class="question p-3">{{ question }}</div>
+
+      <footer class="footer">
+        <div class="inner">
+            <ul class="list-inline">
+                <li class="list-inline-item">
+                    <a href="https://mlundberg.se">About me</a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="https://github.com/mattiaslundberg/mlundberg.se/issues">Report issue</a>
+                </li>
+            </ul>
+        </div>
+      </footer>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
