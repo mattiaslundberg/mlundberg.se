@@ -1,6 +1,6 @@
 const LOCALSTORAGE_USED = "used_question_ids"
 
-const random = (maxValue) => Math.round(Math.random() * maxValue);
+const random = maxValue => Math.round(Math.random() * maxValue);
 
 const getRandomNumber = (maxValue, usedValues) => {
   if (usedValues.length >= maxValue) {
@@ -14,8 +14,17 @@ const getRandomNumber = (maxValue, usedValues) => {
   return candidate;
 };
 
-const saveToLocalStorage = (usedQuestionIds) => {
-  if (!localStorage) { return; }
+const hasLocalStorage = () => {
+  try {
+    localStorage.getItem("invalid");
+    return true;
+  } catch(e) {
+    return false;
+  }
+};
+
+const saveToLocalStorage = usedQuestionIds => {
+  if (!hasLocalStorage()) { return; }
   localStorage.setItem(LOCALSTORAGE_USED, JSON.stringify(usedQuestionIds));
 };
 
@@ -28,7 +37,7 @@ const vm = new Vue({
     question: "",
   },
   created: function() {
-    if (localStorage) {
+    if (hasLocalStorage()) {
       const usedIds = JSON.parse(localStorage.getItem(LOCALSTORAGE_USED) || "[]");
       this.usedQuestionIds.push.apply(this.usedQuestionIds, usedIds);
     }
