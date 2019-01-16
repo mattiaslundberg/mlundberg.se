@@ -6,10 +6,11 @@ const getRandomNumber = (maxValue, usedValues) => {
   if (usedValues.length >= maxValue) {
     return random(maxValue);
   }
-  let candidate = 0;
+  let candidate = -1;
   let remainingTries = 300;
-  while (!candidate && usedValues.includes(candidate) && --remainingTries > 0) {
+  while ((candidate < 0 || usedValues.includes(candidate)) && remainingTries > 0) {
     candidate = random(maxValue);
+    remainingTries--;
   }
   return candidate;
 };
