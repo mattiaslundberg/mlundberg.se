@@ -11,6 +11,8 @@ script:
   - cp -r css build
   - cp -r img build
   - cp -r *.html build
+  - cp -r service-worker.js build
+  - cp -r manifest.webmanifest
 
 
 deploy:

@@ -1,0 +1,13 @@
+{
+  "name": "Check-in generator",
+  "short_name": "Check-in generator",
+  "start_url": "/checkin",
+  "display": "standalone",
+  "background_color": "#f0f0f0",
+  "description": "Generate check-in themes/questions randomly",
+  "icons": [{
+    "src": "img/manifest.png",
+    "sizes": "100x100",
+    "type": "image/png"
+  }]
+}
