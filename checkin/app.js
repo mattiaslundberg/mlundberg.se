@@ -1,5 +1,9 @@
 const LOCALSTORAGE_USED = "used_question_ids"
 
+if (navigator.serviceWorker) {
+  navigator.serviceWorker.register("/service-worker.js", {scope: "/checkin"});
+}
+
 const random = maxValue => Math.round(Math.random() * maxValue);
 
 const getRandomNumber = (maxValue, usedValues) => {
