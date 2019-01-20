@@ -12,18 +12,19 @@ const getAndCache = request => {
 addEventListener("fetch", evt => {
   const request = evt.request;
 
-  const cachedResponse = caches.open(CACHE).then(cache => {
+  caches.open(CACHE).then(cache => {
     return cache.match(request).then(matching => {
       return matching;
     });
+  }).then(cachedResponse => {
+    if (cachedResponse) {
+      evt.respondWith(cachedResponse);
+      evt.waitUntil(getAndCache(request));
+      return;
+    }
+
+    const response = getAndCache(request);
+    console.warn("getAndCache", response, request);
+    evt.respondWith(response);
   });
-
-  if (cachedResponse) {
-    evt.respondWith(cachedResponse);
-    evt.waitUntil(getAndCache(request));
-    return;
-  }
-
-  const response = getAndCache(request)
-  evt.respondWith(response);
 });
