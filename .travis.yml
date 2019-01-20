@@ -12,7 +12,7 @@ script:
   - cp -r img build
   - cp -r *.html build
   - cp -r service-worker.js build
-  - cp -r manifest.webmanifest
+  - cp -r manifest.webmanifest build
 
 
 deploy:
