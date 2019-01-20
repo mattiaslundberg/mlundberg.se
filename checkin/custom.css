@@ -45,3 +45,7 @@ body {
         font-size: 1.5rem;
     }
 }
+
+.list-inline-item:not(:last-child) {
+  margin-right: 1.5rem;
+}
