@@ -24,7 +24,6 @@ addEventListener("fetch", evt => {
     }
 
     const response = getAndCache(request);
-    console.warn("getAndCache", response, request);
     evt.respondWith(response);
   });
 });
