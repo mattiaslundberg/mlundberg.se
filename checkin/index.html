@@ -24,7 +24,8 @@
       <div class="question p-3">
         {{ question }}
         <div class="action-msg">{{ actionMsg }}</div>
-        <button class="used-button" title="Mark question as used, will be less likely to show again." v-on:click.once="markUsed">✓</button>
+        <button class="action-button used-button" title="Mark question as used, will be less likely to show again." v-on:click="markUsed">✓</button>
+        <button class="action-button refresh-button" title="Get another question." v-on:click="refresh">♺</button>
       </div>
 
       <footer class="footer">

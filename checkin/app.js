@@ -53,9 +53,9 @@ const vm = new Vue({
       .then(data => {
         const newQuestions = data.trim().split("\n");
         this.questions.push.apply(this.questions, newQuestions);
-        this.questionIndex = getRandomNumber(this.questions.length, this.usedQuestionIds)
-        this.loading = false;
+        this.questionIndex = getRandomNumber(this.questions.length, this.usedQuestionIds);
         this.question = "NEW_VALUE";
+        this.loading = false;
       }).catch(e => console.warn(e))
   },
   watch: {
@@ -71,6 +71,10 @@ const vm = new Vue({
       saveToLocalStorage(this.usedQuestionIds);
       this.actionMsg = "Sure, I'll try to not show that question again.";
       setTimeout(() => this.actionMsg = "", 5000);
-    }
+    },
+    refresh: function() {
+      this.questionIndex = getRandomNumber(this.questions.length, this.usedQuestionIds);
+      this.question = "NEW_VALUE";
+    },
   }
 })

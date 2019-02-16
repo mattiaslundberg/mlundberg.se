@@ -17,10 +17,9 @@ body {
   position: relative;
 }
 
-.used-button {
+.action-button {
   position: absolute;
   bottom: 0.25rem;
-  right: 0.25rem;
   height: 3rem;
   width: 3rem;
   background-color: inherit;
@@ -31,6 +30,12 @@ body {
   text-align: center;
   padding: 0;
   align-content: center;
+}
+.refresh-button {
+  right: 3.5rem;
+}
+.used-button {
+  right: 0.25rem;
 }
 
 .action-msg {
