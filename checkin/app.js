@@ -1,6 +1,6 @@
 const LOCALSTORAGE_USED = "used_question_ids"
 
-if (navigator.serviceWorker) {
+if (navigator.serviceWorker && location.hostname != "localhost") {
   navigator.serviceWorker.register("/service-worker.js", {scope: "/checkin"});
 }
 
