@@ -42,6 +42,7 @@ body {
   position: absolute;
   bottom: 0.25rem;
   right: 0.25rem;
+  min-height: 3rem;
   font-size: 1.5rem;
   text-align: right;
   background: inherit;
