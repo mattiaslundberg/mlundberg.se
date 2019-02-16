@@ -53,8 +53,6 @@ const vm = new Vue({
         const newQuestions = data.trim().split("\n");
         this.questions.push.apply(this.questions, newQuestions);
         this.questionIndex = getRandomNumber(this.questions.length, this.usedQuestionIds)
-        this.usedQuestionIds.push(this.questionIndex)
-        saveToLocalStorage(this.usedQuestionIds);
         this.loading = false;
         this.question = "NEW_VALUE";
       }).catch(e => console.warn(e))
@@ -64,6 +62,12 @@ const vm = new Vue({
       if (!this.loading) {
         this.question = this.questions[this.questionIndex];
       }
+    }
+  },
+  methods: {
+    markUsed: function() {
+      this.usedQuestionIds.push(this.questionIndex);
+      saveToLocalStorage(this.usedQuestionIds);
     }
   }
 })

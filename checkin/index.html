@@ -21,7 +21,10 @@
 
   <body class="text-center">
     <div class="d-flex flex-column justify-content-center h-100" id="app">
-      <div class="question p-3">{{ question }}</div>
+      <div class="question p-3">
+        {{ question }}
+        <button class="used-button" title="Mark question as used, will be less likely to show again." v-on:click="markUsed">✓</button>
+      </div>
 
       <footer class="footer">
         <div class="inner">
