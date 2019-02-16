@@ -23,7 +23,8 @@
     <div class="d-flex flex-column justify-content-center h-100" id="app">
       <div class="question p-3">
         {{ question }}
-        <button class="used-button" title="Mark question as used, will be less likely to show again." v-on:click="markUsed">✓</button>
+        <div class="action-msg">{{ actionMsg }}</div>
+        <button class="used-button" title="Mark question as used, will be less likely to show again." v-on:click.once="markUsed">✓</button>
       </div>
 
       <footer class="footer">

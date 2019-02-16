@@ -40,6 +40,7 @@ const vm = new Vue({
     usedQuestionIds: [],
     loading: true,
     question: "",
+    actionMsg: "",
   },
   created: function() {
     if (hasLocalStorage()) {
@@ -65,9 +66,11 @@ const vm = new Vue({
     }
   },
   methods: {
-    markUsed: function() {
+    markUsed: function(evt) {
       this.usedQuestionIds.push(this.questionIndex);
       saveToLocalStorage(this.usedQuestionIds);
+      this.actionMsg = "Sure, I'll try to not show that question again.";
+      setTimeout(() => this.actionMsg = "", 5000);
     }
   }
 })
