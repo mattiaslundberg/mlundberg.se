@@ -46,6 +46,8 @@ const vm = new Vue({
     if (hasLocalStorage()) {
       const usedIds = JSON.parse(localStorage.getItem(LOCALSTORAGE_USED) || "[]");
       this.usedQuestionIds.push.apply(this.usedQuestionIds, usedIds);
+    } else {
+      this.showMsg("Storage not accessible, not saving used questions.")
     }
 
     fetch("questions")
@@ -69,12 +71,16 @@ const vm = new Vue({
     markUsed: function(evt) {
       this.usedQuestionIds.push(this.questionIndex);
       saveToLocalStorage(this.usedQuestionIds);
-      this.actionMsg = "Sure, I'll try to not show that question again.";
-      setTimeout(() => this.actionMsg = "", 5000);
+      this.showMsg("Sure, I'll try to not show that question again.");
+
     },
     refresh: function() {
       this.questionIndex = getRandomNumber(this.questions.length, this.usedQuestionIds);
       this.question = "NEW_VALUE";
     },
+    showMsg: function(msg) {
+      this.actionMsg = msg;
+      setTimeout(() => this.actionMsg = "", 5000);
+    }
   }
 })
