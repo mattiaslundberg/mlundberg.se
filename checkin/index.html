@@ -21,12 +21,12 @@
 
   <body class="text-center">
     <div class="d-flex flex-column justify-content-center h-100" id="app">
-      <div class="question">
-        {{ question }}
+      <main class="question">
+        <h1>{{ question }}</h1>
         <div class="action-msg">{{ actionMsg }}</div>
         <button class="action-button used-button" title="Mark question as used, will be less likely to show again." v-on:click="markUsed">✓</button>
         <button class="action-button refresh-button" title="Get another question." v-on:click="refresh">♺</button>
-      </div>
+      </main>
 
       <footer class="footer">
         <div class="inner">

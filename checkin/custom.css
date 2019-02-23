@@ -11,11 +11,16 @@ body {
   flex-grow: 1;
   background: #EFF3FF;
   color: #2D2327;
-  font-size: 2rem;
   width: 100%;
   min-height: 50%;
   position: relative;
   padding: 1rem 1rem 3rem 1rem;
+}
+
+.question h1 {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1;
 }
 
 .action-button {
@@ -67,7 +72,7 @@ body {
 }
 
 @media (min-width: 1200px) {
-  .question {
+  .question h1 {
       font-size: 4rem;
   }
 }
