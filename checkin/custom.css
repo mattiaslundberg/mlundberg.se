@@ -96,3 +96,28 @@ body {
 .list-inline-item:not(:last-child) {
   margin-right: 1.5rem;
 }
+
+@media (prefers-color-scheme: dark) {
+  html,
+  body {
+    background: #0B132B;
+  }
+
+  .question {
+    background: #1C2541;
+  }
+
+  .action-button,
+  .question,
+  .footer a {
+    color: #6FFFE9;
+  }
+
+
+  @media (min-width: 992px) {
+    .question {
+      border: 0.25rem solid #3A506B;
+    }
+  }
+
+}
