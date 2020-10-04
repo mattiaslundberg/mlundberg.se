@@ -59,6 +59,7 @@ body {
 }
 
 .list-inline {
+  padding: 0 1rem;
 }
 
 .list-inline-item {
