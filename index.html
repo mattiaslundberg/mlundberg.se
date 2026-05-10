@@ -1,53 +1,425 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content=
-  "width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
-  <meta name="description" content="Cover for Mattias Lundberg">
-  <meta name="author" content="Mattias Lundberg">
-  <link rel="icon" href="img/favicon.ico">
-  <link rel="serviceworker" href="/service-worker.js" scope=
-  "/checkin">
-  <title>Mattias Lundberg</title>
-  <link href="css/custom.css" rel="stylesheet">
-</head>
-<body>
-  <div class="cover-container">
-    <header class="header">
-      <div>
-        <h1>Mattias Lundberg</h1>
-      </div>
-    </header>
-    <main role="main" class="inner cover">
-      <p class="lead">Software engineer with a love for automation
-      and finding simple solutions.</p>
-      <p>Experienced in web development using different
-      technologies and in different roles.</p>
-    </main>
-    <footer class="mastfoot">
-      <div class="inner">
-        <ul class="list-inline">
-          <li class="list-inline-item">
-            <a href="mailto:me@mlundberg.se">me@mlundberg.se</a>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"
+    />
+    <meta
+      name="description"
+      content="Mattias Lundberg - Software engineer with a love for automation and finding simple solutions. Experienced in web development using different technologies and in different roles."
+    />
+    <meta name="author" content="Mattias Lundberg" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://mlundberg.se/" />
+    <meta property="og:title" content="Mattias Lundberg - Software Engineer" />
+    <meta
+      property="og:description"
+      content="Software engineer with a love for automation and finding simple solutions. Experienced in web development using different technologies and in different roles."
+    />
+    <meta property="og:site_name" content="Mattias Lundberg" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:url" content="https://mlundberg.se/" />
+    <meta name="twitter:title" content="Mattias Lundberg - Software Engineer" />
+    <meta
+      name="twitter:description"
+      content="Software engineer with a love for automation and finding simple solutions."
+    />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://mlundberg.se/" />
+
+    <link rel="icon" href="img/favicon.ico" />
+    <link rel="serviceworker" href="/service-worker.js" scope="/checkin" />
+    <title>Mattias Lundberg - Software Engineer</title>
+    <link href="css/custom.css" rel="stylesheet" />
+    <link href="css/components.css" rel="stylesheet" />
+    <link href="css/animations.css" rel="stylesheet" />
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <nav class="main-nav" role="navigation" aria-label="Main navigation">
+      <div class="nav-container">
+        <a href="#hero" class="nav-logo" aria-label="Mattias Lundberg - Home"
+          >ML</a
+        >
+        <ul class="nav-menu" role="menubar">
+          <li role="none"><a href="#about" role="menuitem">About</a></li>
+          <li role="none"><a href="#skills" role="menuitem">Skills</a></li>
+          <li role="none">
+            <a href="#experience" role="menuitem">Experience</a>
           </li>
-          <li class="list-inline-item">
-            <a href="https://github.com/mattiaslundberg">Github</a>
-          </li>
-          <li class="list-inline-item">
-            <a href="https://gitlab.com/mattiaslundberg">Gitlab</a>
-          </li>
-          <li class="list-inline-item">
-            <a href=
-            "https://www.linkedin.com/in/mattias-lundberg-14490820">
-            LinkedIn</a>
-          </li>
-          <li class="list-inline-item">
-            <a href="tel:+46730327727">+46 73 032 77 27</a>
-          </li>
+          <li role="none"><a href="#contact" role="menuitem">Contact</a></li>
         </ul>
+        <button
+          class="nav-toggle"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section" aria-label="Hero section">
+      <div class="hero-content">
+        <h1 class="hero-title">
+          <span class="hero-greeting">Hi, I'm</span>
+          <span class="hero-name">Mattias Lundberg</span>
+        </h1>
+        <p class="hero-subtitle">
+          Full Stack Engineer specializing in Python, Infrastructure and React
+        </p>
+        <p class="hero-description">
+          Experienced in web development, infrastructure automation, and team
+          leadership. Passionate about creating efficient solutions and
+          improving developer experience.
+        </p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary">Get in Touch</a>
+          <a href="#experience" class="btn btn-secondary">View Experience</a>
+        </div>
+      </div>
+      <div class="scroll-indicator" aria-hidden="true">
+        <span>Scroll</span>
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          aria-hidden="true"
+        >
+          <path d="M12 5v14M19 12l-7 7-7-7" />
+        </svg>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <main id="main-content" role="main">
+      <!-- About Section -->
+      <section
+        id="about"
+        class="section about-section animate-on-scroll"
+        aria-labelledby="about-heading"
+      >
+        <div class="container">
+          <h2 id="about-heading" class="section-title">About</h2>
+          <div class="about-content">
+            <p class="about-text">
+              I'm a Full Stack Engineer with extensive experience in both
+              technical and leadership roles. I provide a calming presence in
+              teams and am known for clear, proactive communication and high
+              output.
+            </p>
+            <p class="about-text">
+              I have broad competence and am not afraid to tackle any technical
+              or non-technical problem. I prefer working with Full Stack
+              development in close collaboration with coworkers of different
+              skillsets.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section
+        id="skills"
+        class="section skills-section animate-on-scroll"
+        aria-labelledby="skills-heading"
+      >
+        <div class="container">
+          <h2 id="skills-heading" class="section-title">Skills</h2>
+          <p class="section-subtitle">Technologies and tools I work with</p>
+          <div class="skills-container">
+            <div class="skills-category">
+              <h3 class="skills-category-title">Languages</h3>
+              <div class="skills-tags">
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">TypeScript</span>
+                <span class="skill-tag">Elixir</span>
+                <span class="skill-tag">Rust</span>
+                <span class="skill-tag">SQL</span>
+                <span class="skill-tag">Node.js</span>
+              </div>
+            </div>
+            <div class="skills-category">
+              <h3 class="skills-category-title">Frontend</h3>
+              <div class="skills-tags">
+                <span class="skill-tag">React</span>
+                <span class="skill-tag">Next.js</span>
+                <span class="skill-tag">TypeScript</span>
+                <span class="skill-tag">HTML5</span>
+                <span class="skill-tag">CSS3</span>
+              </div>
+            </div>
+            <div class="skills-category">
+              <h3 class="skills-category-title">Backend & Frameworks</h3>
+              <div class="skills-tags">
+                <span class="skill-tag">Django</span>
+                <span class="skill-tag">Flask</span>
+                <span class="skill-tag">Phoenix</span>
+                <span class="skill-tag">Express</span>
+                <span class="skill-tag">SQLAlchemy</span>
+                <span class="skill-tag">Knex.js</span>
+                <span class="skill-tag">REST APIs</span>
+              </div>
+            </div>
+            <div class="skills-category">
+              <h3 class="skills-category-title">Cloud & Infrastructure</h3>
+              <div class="skills-tags">
+                <span class="skill-tag">AWS</span>
+                <span class="skill-tag">GCP</span>
+                <span class="skill-tag">ECS</span>
+                <span class="skill-tag">Modal</span>
+                <span class="skill-tag">Kubernetes</span>
+                <span class="skill-tag">Docker</span>
+                <span class="skill-tag">Terraform</span>
+                <span class="skill-tag">Ansible</span>
+                <span class="skill-tag">Pulumi</span>
+              </div>
+            </div>
+            <div class="skills-category">
+              <h3 class="skills-category-title">Databases</h3>
+              <div class="skills-tags">
+                <span class="skill-tag">PostgreSQL</span>
+                <span class="skill-tag">MySQL</span>
+                <span class="skill-tag">DynamoDB</span>
+                <span class="skill-tag">ElasticSearch</span>
+                <span class="skill-tag">Redis</span>
+              </div>
+            </div>
+            <div class="skills-category">
+              <h3 class="skills-category-title">Tools & Practices</h3>
+              <div class="skills-tags">
+                <span class="skill-tag">Git</span>
+                <span class="skill-tag">CI/CD</span>
+                <span class="skill-tag">Testing</span>
+                <span class="skill-tag">Agile</span>
+                <span class="skill-tag">Scrum</span>
+                <span class="skill-tag">Kanban</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experience Section -->
+      <section
+        id="experience"
+        class="section experience-section animate-on-scroll"
+        aria-labelledby="experience-heading"
+      >
+        <div class="container">
+          <h2 id="experience-heading" class="section-title">Experience</h2>
+          <p class="section-subtitle">Professional journey and roles</p>
+          <div class="experience-timeline" role="list">
+            <div class="experience-item animate-on-scroll" role="listitem">
+              <div class="experience-content">
+                <h3 class="experience-title">Senior Software Engineer</h3>
+                <p class="experience-company">All Ears, 2025 –</p>
+                <p class="experience-description">
+                  Working on AI-powered social listening platform capturing
+                  conversations across podcasts, TikTok, and YouTube. Tackled
+                  technical debt around scaling, built RAG (Retrieval-Augmented
+                  Generation) and embeddings systems, redesigned the
+                  transcription setup, and modernized the frontend architecture.
+                </p>
+              </div>
+            </div>
+            <div class="experience-item animate-on-scroll" role="listitem">
+              <div class="experience-content">
+                <h3 class="experience-title">Senior Software Engineer</h3>
+                <p class="experience-company">Compodium International, 2024</p>
+                <p class="experience-description">
+                  Worked on migration of 10,000 users from an acquired company's
+                  platform to Compodium's platform. Updated user interface to
+                  support new flows and integrated with existing payments setup.
+                  Project completed on time.
+                </p>
+              </div>
+            </div>
+            <div class="experience-item animate-on-scroll" role="listitem">
+              <div class="experience-content">
+                <h3 class="experience-title">
+                  Senior Software Engineer / Tech Lead
+                </h3>
+                <p class="experience-company">Epidemic Sound, 2021 – 2023</p>
+                <p class="experience-description">
+                  Led global expansion work adding multi-language support and
+                  integrated multiple payment vendors (Kount, UnionPay, Apple
+                  Pay, Google Pay, WorldPay). Built analytics dashboards with
+                  Grafana and Prometheus for payments data analysis.
+                </p>
+              </div>
+            </div>
+            <div class="experience-item animate-on-scroll" role="listitem">
+              <div class="experience-content">
+                <h3 class="experience-title">Senior Software Engineer</h3>
+                <p class="experience-company">Topgolf, 2020</p>
+                <p class="experience-description">
+                  Moved the team from manual deployment to continuous delivery
+                  using GitLab, Ansible, and Terraform. Introduced automated
+                  testing, achieving over 90% test coverage. Removed technical
+                  debt by replacing RabbitMQ with a Phoenix service for
+                  real-time communication.
+                </p>
+              </div>
+            </div>
+            <div class="experience-item animate-on-scroll" role="listitem">
+              <div class="experience-content">
+                <h3 class="experience-title">
+                  Full Stack Developer → Team Lead
+                </h3>
+                <p class="experience-company">Kundo, 2016 – 2019</p>
+                <p class="experience-description">
+                  Developed customer service SaaS platform (Chat, Mail, Forum)
+                  from prototype to production. Progressed to leadership roles,
+                  establishing Scrum processes, multi-team organization, and
+                  Product Discovery. Recruited and coached teams while
+                  maintaining high delivery quality.
+                </p>
+              </div>
+            </div>
+            <div class="experience-item animate-on-scroll" role="listitem">
+              <div class="experience-content">
+                <h3 class="experience-title">Team Lead</h3>
+                <p class="experience-company">Netrounds, 2014 – 2016</p>
+                <p class="experience-description">
+                  Led team working on cloud-based control center for network
+                  quality assurance. Team consistently met sprint goals with
+                  focus on reducing technical debt. Implemented sharing between
+                  accounts with quality and on time despite not being designed
+                  for from the beginning.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section
+        id="contact"
+        class="section contact-section animate-on-scroll"
+        aria-labelledby="contact-heading"
+      >
+        <div class="container">
+          <h2 id="contact-heading" class="section-title">Get in Touch</h2>
+          <p class="section-subtitle">
+            I'm always open to discussing new projects and opportunities
+          </p>
+          <div class="contact-content">
+            <div class="contact-info">
+              <p class="contact-text">
+                Feel free to reach out via email or connect with me on social
+                media.
+              </p>
+            </div>
+            <div class="contact-links">
+              <a
+                href="mailto:me@mlundberg.se"
+                class="contact-link"
+                aria-label="Send email to me@mlundberg.se"
+              >
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                  />
+                  <polyline points="22,6 12,13 2,6" />
+                </svg>
+                <span>me@mlundberg.se</span>
+              </a>
+              <a
+                href="tel:+46730327727"
+                class="contact-link"
+                aria-label="Call +46 73 032 77 27"
+              >
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                  />
+                </svg>
+                <span>+46 73 032 77 27</span>
+              </a>
+            </div>
+            <ul class="social-links" role="list">
+              <li role="listitem">
+                <a
+                  href="https://github.com/mattiaslundberg"
+                  class="social-link"
+                  aria-label="Visit GitHub profile"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span>GitHub</span>
+                </a>
+              </li>
+              <li role="listitem">
+                <a
+                  href="https://gitlab.com/mattiaslundberg"
+                  class="social-link"
+                  aria-label="Visit GitLab profile"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span>GitLab</span>
+                </a>
+              </li>
+              <li role="listitem">
+                <a
+                  href="https://www.linkedin.com/in/mattias-lundberg-14490820"
+                  class="social-link"
+                  aria-label="Visit LinkedIn profile"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span>LinkedIn</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer" role="contentinfo">
+      <div class="footer-content">
+        <p class="footer-text">
+          &copy; <span id="current-year"></span> Mattias Lundberg. All rights
+          reserved.
+        </p>
       </div>
     </footer>
-  </div>
-</body>
+
+    <script src="js/main.js"></script>
+  </body>
 </html>
